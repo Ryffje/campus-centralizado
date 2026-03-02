@@ -13,17 +13,18 @@
     
     # Instalar dependencias necesarias
     RUN apk add --no-cache \
-        bash \
-        git \
-        curl \
-        zip \
-        unzip \
-        oniguruma-dev \
-        libpng-dev \
-        libjpeg-turbo-dev \
-        freetype-dev \
-        icu-dev \
-        libzip-dev
+    bash \
+    git \
+    curl \
+    zip \
+    unzip \
+    oniguruma-dev \
+    libpng-dev \
+    libjpeg-turbo-dev \
+    freetype-dev \
+    icu-dev \
+    libzip-dev \
+    postgresql-dev
     
     # Extensiones PHP necesarias para Laravel
     RUN docker-php-ext-install \
