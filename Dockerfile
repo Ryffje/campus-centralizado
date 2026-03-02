@@ -27,13 +27,13 @@
     
     # Extensiones PHP necesarias para Laravel
     RUN docker-php-ext-install \
-        pdo \
-        pdo_mysql \
-        pdo_pgsql \
-        mbstring \
-        zip \
-        exif \
-        pcntl
+    pdo \
+    pdo_mysql \
+    pdo_pgsql \
+    mbstring \
+    zip \
+    exif \
+    pcntl
     
     # Composer
     COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -57,6 +57,6 @@
     
     # Comando de inicio
     CMD php artisan config:clear && \
-        php artisan route:clear && \
-        php artisan migrate --force && \
-        php artisan serve --host=0.0.0.0 --port=${PORT}
+    php artisan route:clear && \
+    php artisan migrate --force && \
+    php artisan serve --host=0.0.0.0 --port=${PORT}
