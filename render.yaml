@@ -17,7 +17,7 @@ services:
           name: campus-centralizado
           property: host
       - key: DB_CONNECTION
-        value: mysql
+        value: pgsql
       - key: DB_HOST
         fromDatabase:
           name: campus-db
